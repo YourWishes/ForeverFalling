@@ -1,0 +1,21 @@
+name: ForeverFalling
+description: Fall from the void of one world to another world's sky!
+main: com.domsplace.ForeverFallingPlugin
+authors: [Dominic]
+website: http://domsplace.com/
+version: 1.00
+load: POSTWORLD
+permission: You don't have permission.
+commands:
+   ForeverFalling:
+      description: Reloads the ForeverFalling Configuration
+      usage: /<command>
+      permission: ForeverFalling.reload
+permissions:
+   ForverFalling.*:
+     description: Gives access to all ForverFalling permissions.
+     children:
+       ForeverFalling.reload: true
+   ForeverFalling.reload:
+     description: Allows players to reload the configuration
+     default: op
