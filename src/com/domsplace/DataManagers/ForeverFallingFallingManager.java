@@ -4,6 +4,8 @@ import com.domsplace.ForeverFallingBase;
 import com.domsplace.Objects.ForeverFall;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -36,6 +38,14 @@ public class ForeverFallingFallingManager extends ForeverFallingBase {
                 yml.set("TestFall.fromY", -10);
                 yml.set("TestFall.toY", 400);
                 
+                yml.set("FallTwo.message", "Please stay at spawn");
+                yml.set("FallTwo.fromWorld", Bukkit.getWorlds().get(1).getName());
+                yml.set("FallTwo.toWorld", Bukkit.getWorlds().get(1).getName());
+                yml.set("FallTwo.fromY", -10);
+                yml.set("FallTwo.toY", 70);
+                yml.set("FallTwo.forceX", 0);
+                yml.set("FallTwo.forceZ", 0);
+                
                 yml.save(configFile);
             }
             
@@ -43,8 +53,8 @@ public class ForeverFallingFallingManager extends ForeverFallingBase {
                 String message = yml.getString(fall + ".message", "AHH!");
                 String worldName = yml.getString(fall + ".fromWorld");
                 String toWorldName = yml.getString(fall + ".toWorld");
-                int fromY = yml.getInt(fall + ".fromY", -10);
-                int toY = yml.getInt(fall + ".toY", 400);
+                double fromY = yml.getDouble(fall + ".fromY", -10);
+                double toY = yml.getDouble(fall + ".toY", 400);
                 
                 World fWorld = Bukkit.getWorld(worldName);
                 if(fWorld == null) {
@@ -59,6 +69,16 @@ public class ForeverFallingFallingManager extends ForeverFallingBase {
                 }
                 
                 ForeverFall fl = new ForeverFall(fWorld, tWorld, fromY, toY, Color(message));
+                
+                if(yml.contains(fall + ".forceX")) {
+                    fl.shouldForceX = true;
+                    fl.forceX = yml.getDouble(fall + ".forceX");
+                }
+                
+                if(yml.contains(fall + ".forceZ")) {
+                    fl.shouldForceZ = true;
+                    fl.forceZ = yml.getDouble(fall + ".forceZ");
+                }
                 ForeverFall.falls.add(fl);
             }
             
