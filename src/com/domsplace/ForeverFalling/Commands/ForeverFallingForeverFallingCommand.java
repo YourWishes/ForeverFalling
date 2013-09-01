@@ -1,8 +1,8 @@
-package com.domsplace.Commands;
+package com.domsplace.ForeverFalling.Commands;
 
-import com.domsplace.DataManagers.ForeverFallingConfigManager;
-import com.domsplace.DataManagers.ForeverFallingFallingManager;
-import com.domsplace.ForeverFallingBase;
+import com.domsplace.ForeverFalling.DataManagers.ForeverFallingConfigManager;
+import com.domsplace.ForeverFalling.DataManagers.ForeverFallingFallingManager;
+import com.domsplace.ForeverFalling.ForeverFallingBase;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

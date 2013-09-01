@@ -1,11 +1,8 @@
-package com.domsplace.DataManagers;
+package com.domsplace.ForeverFalling.DataManagers;
 
-import com.domsplace.ForeverFallingBase;
-import com.domsplace.Objects.ForeverFall;
+import com.domsplace.ForeverFalling.ForeverFallingBase;
+import com.domsplace.ForeverFalling.Objects.ForeverFall;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -50,7 +47,7 @@ public class ForeverFallingFallingManager extends ForeverFallingBase {
             }
             
             for(String fall : yml.getKeys(false)) {
-                String message = yml.getString(fall + ".message", "AHH!");
+                String message = yml.getString(fall + ".message", "");
                 String worldName = yml.getString(fall + ".fromWorld");
                 String toWorldName = yml.getString(fall + ".toWorld");
                 double fromY = yml.getDouble(fall + ".fromY", -10);

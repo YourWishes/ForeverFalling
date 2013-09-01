@@ -1,6 +1,6 @@
-package com.domsplace.DataManagers;
+package com.domsplace.ForeverFalling.DataManagers;
 
-import com.domsplace.ForeverFallingBase;
+import com.domsplace.ForeverFalling.ForeverFallingBase;
 import java.io.File;
 import org.bukkit.configuration.file.YamlConfiguration;
 

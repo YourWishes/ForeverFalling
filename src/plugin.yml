@@ -1,9 +1,9 @@
 name: ForeverFalling
 description: Fall from the void of one world to another world's sky!
-main: com.domsplace.ForeverFallingPlugin
+main: com.domsplace.ForeverFalling.ForeverFallingPlugin
 authors: [Dominic]
 website: http://domsplace.com/
-version: 1.01
+version: 1.02
 load: POSTWORLD
 permission: You don't have permission.
 commands:

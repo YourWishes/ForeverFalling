@@ -1,6 +1,6 @@
-package com.domsplace.DataManagers;
+package com.domsplace.ForeverFalling.DataManagers;
 
-import com.domsplace.ForeverFallingBase;
+import com.domsplace.ForeverFalling.ForeverFallingBase;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;

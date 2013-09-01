@@ -1,6 +1,6 @@
-package com.domsplace.Listeners;
+package com.domsplace.ForeverFalling.Listeners;
 
-import com.domsplace.Objects.ForeverFall;
+import com.domsplace.ForeverFalling.Objects.ForeverFall;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -53,7 +53,7 @@ public class ForeverFallingFallingListener extends ForeverFallingListenerBase {
             return;
         }
         
-        e.getPlayer().sendMessage(fall.getMessage());
+        msgPlayer(e.getPlayer(), fall.getMessage());
         
         e.setTo(fall.getToAsLocation(e.getTo()));
         falls.add(e.getPlayer());

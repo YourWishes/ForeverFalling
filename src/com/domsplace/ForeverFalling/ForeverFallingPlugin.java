@@ -1,13 +1,11 @@
-package com.domsplace;
+package com.domsplace.ForeverFalling;
 
-import com.domsplace.Commands.ForeverFallingForeverFallingCommand;
-import com.domsplace.DataManagers.ForeverFallingConfigManager;
-import com.domsplace.DataManagers.ForeverFallingFallingManager;
-import com.domsplace.DataManagers.ForeverFallingPluginManager;
-import com.domsplace.Listeners.ForeverFallingFallingListener;
-import com.domsplace.Utils.ForeverFallingUtils;
+import com.domsplace.ForeverFalling.Commands.ForeverFallingForeverFallingCommand;
+import com.domsplace.ForeverFalling.DataManagers.ForeverFallingConfigManager;
+import com.domsplace.ForeverFalling.DataManagers.ForeverFallingFallingManager;
+import com.domsplace.ForeverFalling.DataManagers.ForeverFallingPluginManager;
+import com.domsplace.ForeverFalling.Listeners.ForeverFallingFallingListener;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -52,14 +50,14 @@ public class ForeverFallingPlugin extends JavaPlugin {
         getCommand("ForeverFalling").setExecutor(ForeverFallingCommand);
         
         for(String c : ForeverFallingPluginManager.getCommands()) {
-            getCommand(c).setPermission(ForeverFallingPluginManager.PluginYML.getString(ForeverFallingUtils.ChatError + "permission"));
+            getCommand(c).setPermission(ForeverFallingPluginManager.PluginYML.getString(ForeverFallingBase.ChatError + "permission"));
         }
         
         //Register Listeners
         pluginManager.registerEvents(FallingListener, this);
         
         
-        ForeverFallingUtils.permBroadcast(
+        ForeverFallingBase.permBroadcast(
             "ForeverFalling.*",
             "§dLoaded " + ForeverFallingPluginManager.getName() + 
             " version " + ForeverFallingPluginManager.getVersion() + 

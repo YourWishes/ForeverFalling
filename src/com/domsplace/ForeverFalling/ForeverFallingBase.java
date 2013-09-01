@@ -1,6 +1,6 @@
-package com.domsplace;
+package com.domsplace.ForeverFalling;
 
-import com.domsplace.Objects.ForeverFall;
+import com.domsplace.ForeverFalling.Objects.ForeverFall;
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.Bukkit;
@@ -58,6 +58,7 @@ public class ForeverFallingBase {
     }
     
     public static void msgPlayer(CommandSender player, String message) {
+        if(message.equalsIgnoreCase("")) return;
         player.sendMessage(ChatDefault + message);
     }
     
