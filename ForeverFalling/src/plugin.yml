@@ -3,7 +3,7 @@ description: Fall from the void of one world to another world's sky!
 main: com.domsplace.ForeverFalling.ForeverFallingPlugin
 authors: [Dominic]
 website: http://domsplace.com/
-version: 1.02
+version: '1.03'
 load: POSTWORLD
 permission: You don't have permission.
 commands:
